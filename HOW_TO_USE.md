@@ -1,10 +1,10 @@
-# 🌐 System Design Masterclass — E-Learning Platform Guide
+# System Design Masterclass — E-Learning Platform Guide
 
 Welcome to the interactive **System Design Masterclass** e-learning course! This guide provides an overview of the platform's features, visual design principles, technical architecture, and instructions on how to run, develop, and export the entire textbook.
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 You can launch the interactive course dashboard locally on your machine in three simple steps:
 
@@ -31,7 +31,7 @@ This compiles highly optimized, minified HTML, CSS, and JS bundles into the `/co
 
 ---
 
-## 🎨 Premium Visual Interface & Design System
+## Premium Visual Interface & Design System
 
 The application has been styled from the ground up to emulate elite, developer-centric documentation platforms.
 
@@ -42,7 +42,7 @@ The application has been styled from the ground up to emulate elite, developer-c
 
 ---
 
-## 📚 Dynamic Course Structure (Chapters I - V)
+## Dynamic Course Structure (Chapters I - V)
 
 The monolithic 317KB `README.md` is ingested dynamically on startup and segment-split into an organized 5-chapter syllabus layout:
 
@@ -58,7 +58,7 @@ The monolithic 317KB `README.md` is ingested dynamically on startup and segment-
 
 ---
 
-## ⚡ Key Interactive Features
+## Key Interactive Features
 
 ### 1. Persistent Lesson Progress Tracking
 * Next to every subtopic in the collapsible left sidebar layout, you will find an interactive checkbox.
@@ -82,7 +82,7 @@ The monolithic 317KB `README.md` is ingested dynamically on startup and segment-
 
 ---
 
-## 📥 Dynamic "Print to PDF" Book Exporter
+## Dynamic "Print to PDF" Book Exporter
 
 The platform features a **high-fidelity client-side PDF Book Export System** that converts the entire interactive multi-page course into a beautifully paginated physical textbook with one click.
 
@@ -97,7 +97,7 @@ The platform features a **high-fidelity client-side PDF Book Export System** tha
 
 ---
 
-## 💻 Tech Stack Highlights
+## Tech Stack Highlights
 * **Vite**: High-speed frontend building tool.
 * **React**: Structured UI state and dynamic routing components.
 * **Tailwind CSS v4**: Zero-config compilation stylesheet engine, leveraging theme variables and native utilities.
