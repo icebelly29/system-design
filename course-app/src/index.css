@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace;
+  
+  --color-brand-50: #f0f7ff;
+  --color-brand-100: #e0effe;
+  --color-brand-200: #bae2fd;
+  --color-brand-300: #7ccafd;
+  --color-brand-400: #38aefb;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-800: #075985;
+  --color-brand-900: #0c4a6e;
+  --color-brand-950: #082f49;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-50 font-sans;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full dark:bg-zinc-800;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-zinc-700;
+}
+
+/* Markdown Custom Styling Details */
+.prose {
+  max-width: 100%;
+}
+.prose table {
+  @apply w-full text-left border-collapse my-6 overflow-x-auto block md:table;
+}
+.prose th {
+  @apply border-b border-slate-200 dark:border-zinc-800 pb-3 pt-2 font-semibold text-slate-700 dark:text-zinc-300 text-sm;
+}
+.prose td {
+  @apply border-b border-slate-100 dark:border-zinc-900 py-3 text-slate-600 dark:text-zinc-400 text-sm;
+}
+.prose tr:hover td {
+  @apply text-slate-900 dark:text-zinc-200 bg-slate-50/50 dark:bg-zinc-900/30;
+}
+.prose blockquote {
+  @apply border-l-4 border-sky-500 pl-4 py-1 my-4 italic text-slate-700 dark:text-zinc-300 bg-sky-50/30 dark:bg-sky-950/10 rounded-r-md pr-2;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-md border border-slate-200/50 dark:bg-zinc-900/70 dark:border-zinc-800/50;
+}
+.glass-nav {
+  @apply bg-slate-50/80 backdrop-blur-md border-b border-slate-200/50 dark:bg-zinc-950/80 dark:border-zinc-900/50;
+}
+
+/* Custom styles for latex block formulas */
+.math-block {
+  @apply bg-slate-100 dark:bg-zinc-900 py-4 px-6 my-6 rounded-xl overflow-x-auto text-center font-mono text-lg border border-slate-200 dark:border-zinc-800 text-sky-600 dark:text-sky-400;
+}
+
+/* ==========================================
+   📚 HIGH-FIDELITY PDF PRINT LAYOUT
+   ========================================== */
+@media print {
+  /* Set pure white backgrounds & high-contrast text */
+  html, body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 12pt !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Exclude dynamic user interface panels */
+  header, 
+  aside, 
+  footer, 
+  .print-exclude, 
+  .lesson-action-bar, 
+  #toc-search-bar, 
+  button {
+    display: none !important;
+  }
+
+  /* Adjust continuous container layout */
+  .print-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 2cm !important;
+  }
+
+  /* Force page breaks before major units */
+  .print-page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+    padding-top: 1cm !important;
+  }
+
+  /* Retain clean technical code blocks */
+  pre, code {
+    background-color: #f3f4f6 !important;
+    color: #1f2937 !important;
+    border: 1px solid #e5e7eb !important;
+    font-size: 10pt !important;
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+  }
+
+  /* Prevent elements from separating mid-page */
+  h1, h2, h3, h4, tr, img, pre, blockquote {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Link modifications for print (hide external icons) */
+  a {
+    color: #111827 !important;
+    text-decoration: underline !important;
+  }
+  a svg {
+    display: none !important;
+  }
+}
